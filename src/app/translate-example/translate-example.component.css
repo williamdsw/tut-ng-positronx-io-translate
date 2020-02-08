@@ -1,0 +1,20 @@
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: cornflowerblue;
+    margin: 1em auto;
+    border: 3px solid dodgerblue;
+    box-shadow: 2px 2px 2px 2px rgba(110, 196, 245, 0.5);
+}
+
+.form-container label {
+    color: paleturquoise;
+    font-weight: bold;
+}
+
+.form-container input, .form-container textarea {
+    color: blue;
+    font-style: italic;
+    background-color: lightblue;
+}

@@ -1,0 +1,63 @@
+
+<!-- navbar -->
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+        <div class="navbar-brand"> {{ 'site-title' | translate }}</div>
+    </div>
+
+    <!-- select -->
+    <span class="form-inline">
+        <select class="form-control" #sltLanguage (change)="switchLanguage (sltLanguage.value);">
+            <option *ngFor="let language of translateService.getLangs ();" [value]="language" [selected]="language === translateService.currentLang">
+                {{ language }}
+            </option>
+        </select>
+    </span>
+</nav>
+
+<!-- form -->
+<div class="container">
+    <div class="form-container">
+        <form>
+
+            <!-- name -->
+            <div class="form-group">
+                <label> {{ 'name' | translate }} </label>
+                <input type="text" class="form-control">
+                <small class="text-danger"> {{ 'name-error' | translate }} </small>
+            </div>
+    
+            <!-- email -->
+            <div class="form-group">
+                <label> {{ 'email' | translate }} </label>
+                <input type="text" class="form-control">
+            </div>
+    
+            <!-- phone number -->
+            <div class="form-group">
+                <label> {{ 'phone-number' | translate }} </label>
+                <input type="tel" class="form-control">
+            </div>
+    
+            <!-- password -->
+            <div class="form-group">
+                <label> {{ 'password' | translate }} </label>
+                <input type="password" class="form-control">
+            </div>
+    
+            <!-- biography -->
+            <div class="form-group">
+                <label> {{ 'biography' | translate }} </label>
+                <textarea rows="3" class="form-control"></textarea>
+            </div>
+    
+            <!-- biography -->
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input">
+                <label class="form-check-label"> {{ 'terms-of-conditions' | translate }}</label>
+            </div>
+    
+            <button type="submit" class="btn btn-block btn-danger"> {{ 'submit' | translate }} </button>
+        </form>
+    </div>
+</div>
