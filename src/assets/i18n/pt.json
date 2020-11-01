@@ -1,11 +1,12 @@
 {
-    "site-title": "Angular Multi Idiomas Site",
+    "site-title": "Site multitraduzido em Angular",
     "name": "Nome",
-    "name-error": "Nome é obrigatório!",
-    "email": "Email",
+    "required-error": "Esse campo é obrigatório!",
+    "email": "E-mail",
     "phone-number": "Telefone",
     "password": "Senha",
     "biography": "Biografia",
     "terms-of-conditions": "Eu concordo com os termos e as condições",
+    "required-fields": "Campos Obrigatórios",
     "submit": "Enviar"
 }

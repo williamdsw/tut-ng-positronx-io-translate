@@ -13,8 +13,7 @@ export class TranslateExampleComponent implements OnInit {
     translateService.setDefaultLang ('en');
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   switchLanguage(language: string) {
     this.translateService.use (language);

@@ -1,11 +1,12 @@
 {
     "site-title": "Angular Multi Language Site",
     "name": "Name",
-    "name-error": "Name is required!",
+    "required-error": "This field is required!",
     "email": "Email Address",
     "phone-number": "Phone Number",
     "password": "Password",
     "biography": "Biography",
     "terms-of-conditions": "I agree to terms and conditions.",
+    "required-fields": "Required Fields",
     "submit": "Submit"
 }

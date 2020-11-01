@@ -2,13 +2,14 @@
 <!-- navbar -->
 <nav class="navbar navbar-dark bg-primary">
     <div class="container">
-        <div class="navbar-brand"> {{ 'site-title' | translate }}</div>
+        <div class="navbar-brand"> {{ 'site-title' | translate }} </div>
     </div>
 
     <!-- select -->
     <span class="form-inline">
-        <select class="form-control" #sltLanguage (change)="switchLanguage (sltLanguage.value);">
-            <option *ngFor="let language of translateService.getLangs ();" [value]="language" [selected]="language === translateService.currentLang">
+        <select class="form-control" #languageSelect (change)="switchLanguage (languageSelect.value);">
+            <option *ngFor="let language of translateService.getLangs ();" 
+                    [value]="language" [selected]="language === translateService.currentLang">
                 {{ language }}
             </option>
         </select>
@@ -16,48 +17,61 @@
 </nav>
 
 <!-- form -->
-<div class="container">
-    <div class="form-container">
+<main class="container">
+    <article class="form-container">
         <form>
 
             <!-- name -->
             <div class="form-group">
-                <label> {{ 'name' | translate }} </label>
-                <input type="text" class="form-control">
-                <small class="text-danger"> {{ 'name-error' | translate }} </small>
+                <label for="nameInput"> * {{ 'name' | translate }} : </label>
+                <input type="text" id="nameInput" class="form-control" required>
+                <small class="text-warning"> {{ 'required-error' | translate }} </small>
             </div>
     
             <!-- email -->
             <div class="form-group">
-                <label> {{ 'email' | translate }} </label>
-                <input type="text" class="form-control">
+                <label for="emailInput"> * {{ 'email' | translate }} : </label>
+                <input type="email" id="emailInput" class="form-control" required>
+                <small class="text-warning"> {{ 'required-error' | translate }} </small>
             </div>
     
             <!-- phone number -->
             <div class="form-group">
-                <label> {{ 'phone-number' | translate }} </label>
-                <input type="tel" class="form-control">
+                <label for="phoneNumberInput"> {{ 'phone-number' | translate }} </label>
+                <input type="tel" id="phoneNumberInput" class="form-control">
             </div>
     
             <!-- password -->
             <div class="form-group">
-                <label> {{ 'password' | translate }} </label>
-                <input type="password" class="form-control">
+                <label for="passwordInput"> * {{ 'password' | translate }} </label>
+                <input type="password" id="passwordInput" class="form-control" required>
+                <small class="text-warning"> {{ 'required-error' | translate }} </small>
             </div>
     
             <!-- biography -->
             <div class="form-group">
-                <label> {{ 'biography' | translate }} </label>
-                <textarea rows="3" class="form-control"></textarea>
+                <label for="biographyTextarea"> {{ 'biography' | translate }} </label>
+                <textarea id="biographyTextarea" rows="3" class="form-control"></textarea>
             </div>
     
-            <!-- biography -->
+            <!-- terms of conditions -->
             <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input">
-                <label class="form-check-label"> {{ 'terms-of-conditions' | translate }}</label>
+                <input type="checkbox" id="termsOfConditionsCheckbox" class="form-check-input" required>
+                <label for="termsOfConditionsCheckbox" class="form-check-label"> * {{ 'terms-of-conditions' | translate }} </label>
+                <br/>
+                <small class="text-warning"> {{ 'required-error' | translate }} </small>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-light font-weight-bold"> * {{ 'required-fields' | translate }} </p>
+                </div>
             </div>
     
             <button type="submit" class="btn btn-block btn-danger"> {{ 'submit' | translate }} </button>
         </form>
-    </div>
-</div>
+    </article>
+</main>
+
