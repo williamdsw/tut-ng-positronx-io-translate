@@ -23,7 +23,9 @@
 
             <!-- name -->
             <div class="form-group">
-                <label for="nameInput"> * {{ ('name' | translate) || 'Name' }} : </label>
+                <label for="nameInput"> 
+                    * {{ ('name' | translate) || 'Name' }} : 
+                </label>
                 <input type="text" id="nameInput" class="form-control" required>
                 <small class="text-warning"> 
                     {{ ('required-error' | translate) || 'This field is required!' }} 
@@ -32,7 +34,9 @@
     
             <!-- email -->
             <div class="form-group">
-                <label for="emailInput"> * {{ ('email' | translate) || 'Email' }} : </label>
+                <label for="emailInput"> 
+                    * {{ ('email' | translate) || 'Email' }} : 
+                </label>
                 <input type="email" id="emailInput" class="form-control" required>
                 <small class="text-warning"> 
                     {{ ('required-error' | translate) || 'This field is required!' }} 
@@ -41,13 +45,17 @@
     
             <!-- phone number -->
             <div class="form-group">
-                <label for="phoneNumberInput"> {{ ('phone-number' | translate) || 'Phone Number' }} </label>
+                <label for="phoneNumberInput"> 
+                    {{ ('phone-number' | translate) || 'Phone Number' }} 
+                </label>
                 <input type="tel" id="phoneNumberInput" class="form-control">
             </div>
     
             <!-- password -->
             <div class="form-group">
-                <label for="passwordInput"> * {{ 'password' | translate }} </label>
+                <label for="passwordInput"> 
+                    * {{ ('password' | translate) || 'Password' }} 
+                </label>
                 <input type="password" id="passwordInput" class="form-control" required>
                 <small class="text-warning"> 
                     {{ ('required-error' | translate) || 'This field is required!' }} 
@@ -56,7 +64,9 @@
     
             <!-- biography -->
             <div class="form-group">
-                <label for="biographyTextarea"> {{ ('biography' | translate) || 'Biography' }} </label>
+                <label for="biographyTextarea"> 
+                    {{ ('biography' | translate) || 'Biography' }} 
+                </label>
                 <textarea id="biographyTextarea" rows="3" class="form-control"></textarea>
             </div>
     
