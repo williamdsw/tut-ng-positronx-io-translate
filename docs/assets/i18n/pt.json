@@ -1,0 +1,12 @@
+{
+    "site-title": "Site multitraduzido em Angular",
+    "name": "Nome",
+    "required-error": "Esse campo é obrigatório!",
+    "email": "E-mail",
+    "phone-number": "Telefone",
+    "password": "Senha",
+    "biography": "Biografia",
+    "terms-of-conditions": "Eu concordo com os termos e as condições",
+    "required-fields": "Campos Obrigatórios",
+    "submit": "Enviar"
+}
